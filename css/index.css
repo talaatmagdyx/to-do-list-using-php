@@ -1,0 +1,63 @@
+html, body, div, ul, li, span, p, input, a {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body{
+    direction: rtl;
+    background: #eceff0;
+}
+.container{
+    background: #fff;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.container .header {
+    margin-bottom: 10px;
+}
+.tasks {
+    list-style-type: none;
+}
+
+.tasks li, .task-add .input{
+    border-bottom: 1px dashed #ccc;
+    padding: 15px 0;
+}
+.task .done {
+    text-decoration: line-through;
+}
+
+.task .date{
+    margin-top: 7px;
+    font-size: 13px;
+}
+
+.task .done-button{
+    text-decoration: none;
+    background-color: #d9dfe1;
+    color: #363639;
+    border-bottom: 1px dashed;
+    padding: 3px 6px;
+    opacity: 0.4;
+}
+
+.task-add input{
+    width: 100%;
+}
+
+.task-add input:focus{
+    outline: none;
+}
+
+.task-add .submit{
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    box-shadow: 3px 3px 0 #ddd;
+}
