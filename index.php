@@ -1,3 +1,4 @@
+<?php require 'app/config.php';?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,6 +15,14 @@
                     <p class="date">اخر تاريخ لإنجاز المهمة : 2020-11-24</p>
                 </li>
             </ul>
+            <?php
+                if($_SESSION['errors']){
+                    foreach ($_SESSION['errors'] as $error){
+                        echo "<p class=\"error\">$error</p>";
+                    }
+                }
+                $_SESSION['errors'] = [];
+            ?>
             <form class="task-add" action="app/add.php" method="POST">
                 <input type="text" placeholder="أدخل وصف مهمه جديدة هنا" class="input" name="task_name">
                 <input type="text" placeholder="أدخل اخر تاريخ لإنجاز المهمه مثال ١/١/٢٠٢١" class="input" name="due_date">
