@@ -13,6 +13,4 @@ mysqli_set_charset($connection, 'utf8');
 // check error when connect with mysql
 if($connection->connect_error) {
     echo "$connection->connect_error فشل اﻷتصال بقاعدة البيانات ";
-}else{
-    echo "  نم اﻷتصال بقاعدة البيانات بنجاح ";
 }
